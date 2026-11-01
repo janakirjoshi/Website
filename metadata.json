@@ -1,0 +1,6 @@
+{
+  "name": "Mohanwebsitestudio",
+  "description": "Lock the price before the work starts. Website design and setup by SH Deshpande.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
