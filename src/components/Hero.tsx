@@ -108,7 +108,7 @@ export const Hero: React.FC<HeroProps> = ({ bookingLink, whatsappLink }) => {
             {/* Arch frame container */}
             <div className="relative shadow-xl shadow-[#1B2A4A]/5">
               <RichImage
-                src="/assets/aistudio/WhatsApp_Image_2026-11-01_at_10.10.30_PM_f1dfc110.jpeg"
+                src="/me.jpg"
                 alt="SH Deshpande, founder of Mohanwebsitestudio"
                 aspectRatio="aspect-[3/4]"
                 arch={true}
