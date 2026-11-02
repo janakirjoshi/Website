@@ -12,12 +12,14 @@ interface CardItem {
   subtitle: string;
 }
 
+const BRAND_IMAGE = '/assets/aistudio/WhatsApp_Image_2026-11-01_at_10.10.30_PM_f1dfc110.jpeg';
+
 const cards: CardItem[] = [
   {
     id: '01',
     number: '01',
     title: 'Enquiry form',
-    image: '/work-1.jpg',
+    image: BRAND_IMAGE,
     subtitle: 'FIXED PAGES & BUDGET',
     today: 'Enquiries arrive without scope or budget, leaving you to guess the pages and negotiate back and forth.',
     withStudio: 'A short enquiry form fixes the pages and the budget before conversations begin.',
@@ -26,7 +28,7 @@ const cards: CardItem[] = [
     id: '02',
     number: '02',
     title: 'Quote board',
-    image: '/work-2.jpg',
+    image: BRAND_IMAGE,
     subtitle: 'OPEN QUOTES & RUPEES AT RISK',
     today: 'Open quotes drift across messages and notebooks with no clear view of which proposals are pending.',
     withStudio: 'A board shows every open quote and the rupees at risk in one clear place.',
@@ -35,7 +37,7 @@ const cards: CardItem[] = [
     id: '03',
     number: '03',
     title: 'Monday list',
-    image: '/work-3.jpg',
+    image: BRAND_IMAGE,
     subtitle: 'PUBLIC WEBSITE REQUESTS',
     today: 'You look for clients by asking around after the current project wraps up.',
     withStudio: 'A Monday list brings people publicly asking for a website straight to you.',

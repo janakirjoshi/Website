@@ -11,6 +11,8 @@ interface RichImageProps {
   arch?: boolean;
 }
 
+const BRAND_FALLBACK = '/assets/aistudio/WhatsApp_Image_2026-11-01_at_10.10.30_PM_f1dfc110.jpeg';
+
 export const RichImage: React.FC<RichImageProps> = ({
   src,
   alt,
@@ -21,8 +23,17 @@ export const RichImage: React.FC<RichImageProps> = ({
   subtitle,
   arch = false,
 }) => {
+  const [imgSrc, setImgSrc] = useState(src || BRAND_FALLBACK);
   const [hasError, setHasError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+
+  const handleImgError = () => {
+    if (imgSrc !== BRAND_FALLBACK) {
+      setImgSrc(BRAND_FALLBACK);
+    } else {
+      setHasError(true);
+    }
+  };
 
   const displayText = number || initials || '';
 
@@ -73,10 +84,10 @@ export const RichImage: React.FC<RichImageProps> = ({
       {/* Actual image rendered with object-fit cover */}
       {!hasError && (
         <img
-          src={src}
+          src={imgSrc}
           alt={alt}
           onLoad={() => setIsLoaded(true)}
-          onError={() => setHasError(true)}
+          onError={handleImgError}
           referrerPolicy="no-referrer"
           className={`relative z-20 h-full w-full object-cover transition-opacity duration-700 ${
             isLoaded ? 'opacity-100' : 'opacity-0'

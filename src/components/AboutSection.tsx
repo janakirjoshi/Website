@@ -16,7 +16,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ bookingLink }) => {
           <div className="relative h-20 w-20 sm:h-24 sm:w-24 shrink-0 rounded-full overflow-hidden border-2 border-[#1B2A4A]/15 bg-gradient-to-br from-[#1B2A4A] to-[#E8590C]">
             {!imgError ? (
               <img
-                src="/me.jpg"
+                src="/assets/aistudio/WhatsApp_Image_2026-11-01_at_10.10.30_PM_f1dfc110.jpeg"
                 alt="SH Deshpande"
                 onError={() => setImgError(true)}
                 className="h-full w-full object-cover"

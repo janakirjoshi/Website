@@ -62,14 +62,14 @@ export const TopBar: React.FC<TopBarProps> = ({ bookingLink }) => {
           <div
             className={`transition-all duration-300 ${
               isOverInk
-                ? 'bg-[#F7F1E6] rounded-xl px-2.5 py-1.5 shadow-xs'
+                ? 'bg-[#F7F1E6] rounded-2xl p-1.5 shadow-xs'
                 : 'bg-transparent p-0'
             }`}
           >
             <img
-              src="/logo.png"
+              src="/assets/aistudio/WhatsApp_Image_2026-11-01_at_10.10.30_PM_f1dfc110.jpeg"
               alt="Mohanwebsitestudio"
-              className="h-8 md:h-9 w-auto object-contain"
+              className="h-10 w-10 md:h-11 md:w-11 rounded-xl object-cover shadow-xs"
             />
           </div>
         </a>

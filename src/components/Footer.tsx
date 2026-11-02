@@ -19,12 +19,12 @@ export const Footer: React.FC<FooterProps> = ({
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
         {/* Left: Logo on cream panel & City */}
         <div className="space-y-4 max-w-md">
-          {/* logo.png on a small cream rounded panel */}
-          <div className="bg-[#F7F1E6] rounded-2xl px-3.5 py-2 inline-block shadow-sm">
+          {/* logo on a small cream rounded panel */}
+          <div className="bg-[#F7F1E6] rounded-2xl p-1.5 inline-block shadow-sm">
             <img
-              src="/logo.png"
+              src="/assets/aistudio/WhatsApp_Image_2026-11-01_at_10.10.30_PM_f1dfc110.jpeg"
               alt="Mohanwebsitestudio"
-              className="h-8 md:h-9 w-auto object-contain"
+              className="h-10 w-10 md:h-12 md:w-12 rounded-xl object-cover"
             />
           </div>
 
