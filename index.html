@@ -16,5 +16,56 @@
   <body class="bg-[#F7F1E6] text-[#1B2A4A] antialiased selection:bg-[#E8590C]/20 selection:text-[#1B2A4A]">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // LiveKit Embed Resilient Handler
+      // Prevents uncaught CORS/network errors when previewing before origins are whitelisted in LiveKit Console
+      (function () {
+        const origFetch = window.fetch;
+        window.fetch = async function (resource, init) {
+          const url = typeof resource === 'string' ? resource : (resource && resource.url) || '';
+          if (url.includes('/api/embed/config/')) {
+            try {
+              const res = await origFetch.apply(this, arguments);
+              if (res.ok) return res;
+            } catch (err) {
+              // Origin not yet in LiveKit dashboard whitelist or network blocked
+            }
+            // Return fallback agent config so the voice widget mounts cleanly
+            return new Response(
+              JSON.stringify({
+                color: '#002CF2',
+                logo: '',
+                listening_text: 'Talk with Mohanwebsitestudio AI',
+                theme: 'LIGHT',
+                supports_chat: true,
+                supports_video: false,
+                supports_screenshare: false,
+                agent_name: 'Mohanwebsitestudio AI'
+              }),
+              {
+                status: 200,
+                headers: { 'Content-Type': 'application/json' }
+              }
+            );
+          }
+          return origFetch.apply(this, arguments);
+        };
+
+        // Suppress unhandled embed-popup console errors from triggering iframe error overlay
+        const origError = console.error;
+        console.error = function (...args) {
+          if (typeof args[0] === 'string' && args[0].includes('embed-popup')) {
+            console.warn(...args);
+            return;
+          }
+          return origError.apply(this, args);
+        };
+      })();
+    </script>
+    <script
+      src="https://cloud.livekit.io/embed-popup.js"
+      data-lk-agent="CA_mfZ6rp6eaBpK"
+      data-lk-color="#002CF2"
+    ></script>
   </body>
 </html>

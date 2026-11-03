@@ -55,3 +55,9 @@ body {
     transition-delay: 0s !important;
   }
 }
+
+/* LiveKit embed positioning and layer priority */
+#lk-embed-wrapper {
+  position: relative;
+  z-index: 50;
+}
