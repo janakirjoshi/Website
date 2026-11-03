@@ -16,6 +16,7 @@ import { EnquiryFormSection } from './components/EnquiryFormSection.tsx';
 import { FinalInvitation } from './components/FinalInvitation.tsx';
 import { Footer } from './components/Footer.tsx';
 import { MobileStickyBar } from './components/MobileStickyBar.tsx';
+import { LiveKitVoiceAssistant } from './components/LiveKitVoiceAssistant.tsx';
 
 const BOOKING_LINK = 'https://cal.com/sh-deshpande-ko3xdf/30min';
 const WHATSAPP_LINK = 'https://wa.me/9632172938';
@@ -72,6 +73,9 @@ export default function App() {
 
       {/* Sticky mobile CTA bar */}
       <MobileStickyBar bookingLink={BOOKING_LINK} />
+
+      {/* Floating WebCall Voice Assistant */}
+      <LiveKitVoiceAssistant agentId="CA_mfZ6rp6eaBpK" accentColor="#002CF2" />
     </div>
   );
 }
