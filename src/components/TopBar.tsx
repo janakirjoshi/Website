@@ -97,6 +97,12 @@ export const TopBar: React.FC<TopBarProps> = ({ bookingLink }) => {
           >
             About
           </a>
+          <a
+            href="#enquiry-form"
+            className={`transition-colors whitespace-nowrap shrink-0 ${linkColor}`}
+          >
+            Enquiry
+          </a>
         </nav>
 
         {/* Zone 3: Book a call pill */}

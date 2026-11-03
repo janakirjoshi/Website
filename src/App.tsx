@@ -12,6 +12,7 @@ import { BeforeAfterSection } from './components/BeforeAfterSection.tsx';
 import { HowWeStartSection } from './components/HowWeStartSection.tsx';
 import { AboutSection } from './components/AboutSection.tsx';
 import { QuestionsSection } from './components/QuestionsSection.tsx';
+import { EnquiryFormSection } from './components/EnquiryFormSection.tsx';
 import { FinalInvitation } from './components/FinalInvitation.tsx';
 import { Footer } from './components/Footer.tsx';
 import { MobileStickyBar } from './components/MobileStickyBar.tsx';
@@ -50,6 +51,9 @@ export default function App() {
 
         {/* 8. Questions */}
         <QuestionsSection />
+
+        {/* Enquiry form connected to n8n */}
+        <EnquiryFormSection whatsappLink={WHATSAPP_LINK} />
 
         {/* 9. Final invitation, on ink */}
         <FinalInvitation
